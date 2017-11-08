@@ -1,0 +1,12 @@
+#!/bin/bash
+for i in `cat 1`
+  do
+
+grep $i 2 > /dev/null
+if [ $? -eq 0 ];then
+echo "file_$i is exits"
+else
+echo "file_$i is not exists"
+rm -rf $i
+fi
+done
